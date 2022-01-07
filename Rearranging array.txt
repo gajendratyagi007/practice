@@ -1,0 +1,22 @@
+class Solution {
+
+    public static void Rearrange(int a[], int n, int answer[])
+    {
+        Arrays.sort(a);
+        int min =0;
+        int max = n-1;
+        for(int i=0; i<n; i++)
+        {
+            if(i%2 == 0){
+                answer[i] = a[min];
+                min++;
+            }
+            else{
+                answer[i] = a[max];
+                max--;
+            }
+        }
+        
+        
+    }
+}
